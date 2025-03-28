@@ -1,9 +1,9 @@
 
-name: update n1 sever
+name: Update n1 servers
 host: n1
 
 tasks:
-  - name: create directory
+  - name: Create Directory
     file:
       path: /home/ec2-user/new_dir
       state: directory
