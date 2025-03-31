@@ -1,22 +1,18 @@
 
-- name: Install HTTP server
+- name: Deploy web app
   hosts: n2
   become: yes
 
   tasks:
-  - name: Install HTTPD
+  - name: Install Git
     yum:
-      name: httpd
+      name: git
       state: present
 
-  - name: start httpd
-    service:
-      name: httpd
-      state: started
+  - name: host code
+    git:
+      repo: https://github.com/Rita-Oyeyiola/ansible-work5.git
+      dest: /var/www/html
 
-  - name: Enable httpd
-    service:
-      name: httpd
-      state: yes 
-
+  
 ...              
