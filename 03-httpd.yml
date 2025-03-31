@@ -17,6 +17,6 @@
   - name: Enable httpd
     service:
       name: httpd
-      state: yes 
+      enable: yes 
 
 ...              
