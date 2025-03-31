@@ -11,12 +11,12 @@
 
   - name: start httpd
     service:
-      path: httpd
+      name: httpd
       state: stated
 
   - name: Enable httpd
     service:
-      path: httpd
-      state: yes   
+      name: httpd
+      state: yes 
 
 ...              
